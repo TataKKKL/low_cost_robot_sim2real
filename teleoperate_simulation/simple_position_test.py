@@ -10,10 +10,11 @@ import mujoco
 import mujoco.viewer
 import numpy as np
 import time
+import sys
+import argparse
 
-def main():
+def main(model_path=None):
     # Load the robot model
-    model_path = "trs_so_arm100/so_arm100.xml"  # Adjust path if needed
     print(f"📂 Loading model from: {model_path}")
     
     try:
@@ -80,7 +81,10 @@ def main():
     print("👋 Viewer closed")
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Simple MuJoCo robot position test")
+    parser.add_argument("--model_path", type=str, default="trs_so_arm100/so_arm100.xml", help="Path to the MuJoCo XML model file")
+    args = parser.parse_args()
+    main(model_path=args.model_path)
 
 
 # # Old (incorrect) way
