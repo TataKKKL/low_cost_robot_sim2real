@@ -21,3 +21,5 @@ mjpython simple_position_test.py --model_path trs_so_arm100/so_arm100.xml
 https://github.com/TheRobotStudio/SO-ARM100/tree/main/Simulation/SO101
 
 mjpython simple_position_test.py --model_path SO101/so101_new_calib.xml
+
+mjpython simple_position_test.py --model_path SO101/scene.xml
