@@ -88,7 +88,7 @@ def teleoperate_sim(cfg: TeleoperateSimConfig):
                 joint_values = list(action.values())[:6]
                 
                 # 🔄 Reverse shoulder_pan direction (swap left/right)
-                joint_values[0] = -joint_values[0]
+                # joint_values[0] = -joint_values[0]
                 
                 # 🔧 Apply calibration offsets (in degrees, before converting to radians)
                 raw_values = joint_values.copy()  # Keep original for debug (after direction reversal)
