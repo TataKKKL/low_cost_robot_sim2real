@@ -8,17 +8,17 @@ import draccus
 import rerun as rr
 import mujoco
 import mujoco.viewer
-from lerobot.common.robots import RobotConfig
-from lerobot.common.teleoperators import (
+from lerobot.robots import RobotConfig
+from lerobot.teleoperators import (
     Teleoperator,
     TeleoperatorConfig,
     make_teleoperator_from_config,
 )
-from lerobot.common.utils.utils import init_logging
-from lerobot.common.utils.visualization_utils import _init_rerun
+from lerobot.utils.utils import init_logging
+from lerobot.utils.visualization_utils import _init_rerun
 import numpy as np
 
-from lerobot.common.teleoperators import koch_leader, so100_leader, so101_leader  # noqa: F401
+from lerobot.teleoperators import koch_leader, so100_leader, so101_leader  # noqa: F401
 
 @dataclass
 class TeleoperateSimConfig:
@@ -45,7 +45,7 @@ def teleoperate_sim(cfg: TeleoperateSimConfig):
 
     # 🔧 Calibration offsets for each joint (in degrees)
     # Order: [shoulder_pan, shoulder_lift, elbow_flex, wrist_flex, wrist_roll, gripper]
-    calibration_offsets = [0, -90, 90, 0, 0, 0]
+    calibration_offsets = [0, 0, 0, 0, 0, 0]
     
     print("🔧 Calibration offsets applied:")
     joint_names = ["shoulder_pan", "shoulder_lift", "elbow_flex", "wrist_flex", "wrist_roll", "gripper"]

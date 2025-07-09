@@ -21,17 +21,17 @@ import draccus
 import rerun as rr
 import mujoco
 import mujoco.viewer
-from lerobot.common.robots import RobotConfig
-from lerobot.common.teleoperators import (
+from lerobot.robots import RobotConfig
+from lerobot.teleoperators import (
     Teleoperator,
     TeleoperatorConfig,
     make_teleoperator_from_config,
 )
-from lerobot.common.utils.utils import init_logging
-from lerobot.common.utils.visualization_utils import _init_rerun
+from lerobot.utils.utils import init_logging
+from lerobot.utils.visualization_utils import _init_rerun
 import numpy as np
 
-from lerobot.common.teleoperators import koch_leader, so100_leader, so101_leader  # noqa: F401
+from lerobot.teleoperators import koch_leader, so100_leader, so101_leader  # noqa: F401
 
 @dataclass
 class TeleoperateSimConfig:
