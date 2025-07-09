@@ -51,6 +51,7 @@ cd ..
 
 ### SO-101 Arm
 - **Model Path**: `teleoperate_simulation/SO101/so101_new_calib.xml`
+- **Scene Path**: `teleoperate_simulation/SO101/scene.xml` (includes background environment)
 - **Source**: [TheRobotStudio SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Simulation/SO101)
 
 ## 🎮 Usage
@@ -89,6 +90,17 @@ python -m teleoperate_sim \
   --display_data=true
 ```
 
+Run teleoperation with the SO-101 arm in scene environment (Linux):
+
+```bash
+cd teleoperate_simulation
+python -m teleoperate_sim \
+  --teleop.type=so101_leader \
+  --teleop.port=/dev/ttyACM1 \
+  --teleop.id=my_awesome_leader_arm \
+  --mjcf_path=SO101/scene.xml \
+  --display_data=true
+```
 
 ### Position Testing
 
