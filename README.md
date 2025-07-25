@@ -33,6 +33,7 @@ This project uses [leRobot](https://github.com/huggingface/lerobot) for robot te
 # Clone leRobot repository
 git clone https://github.com/huggingface/lerobot.git
 cd lerobot
+git checkout aec1b29d230341721c8d8f4413c47dcdb424cf5d
 
 # Install leRobot in development mode
 pip install -e .
@@ -41,7 +42,7 @@ pip install -e .
 cd ..
 ```
 
-**Note:** The project has been tested with leRobot commit: `fe88c5942cce222c5463350d999a463b9016cf8c`
+**Note:** The project has been tested with leRobot commit: `aec1b29d230341721c8d8f4413c47dcdb424cf5d`
 
 ## 🤖 Supported Robots
 
