@@ -80,7 +80,7 @@ mjpython -m teleoperate_sim \
   --teleop.port=/dev/tty.usbmodem58FA0927201 \
   --teleop.id=my_awesome_leader_arm \
   --mjcf_path=trs_so_arm100/so_arm100.xml \
-  --display_data= true
+  --display_data=false
 ```
 
 Run teleoperation with the SO-101 arm (Linux):
@@ -92,7 +92,7 @@ python -m teleoperate_sim \
   --teleop.port=/dev/ttyACM1 \
   --teleop.id=my_awesome_leader_arm \
   --mjcf_path=SO101/so101_new_calib.xml \
-  --display_data=true
+  --display_data=false
 ```
 
 Run teleoperation with the SO-101 arm in scene environment (Linux):
@@ -104,7 +104,7 @@ python -m teleoperate_sim \
   --teleop.port=/dev/ttyACM1 \
   --teleop.id=my_awesome_leader_arm \
   --mjcf_path=SO101/scene.xml \
-  --display_data=true
+  --display_data=false
 ```
 
 ### Position Testing
